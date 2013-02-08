@@ -11,15 +11,14 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	xmlns:gml="http://www.opengis.net/gml" 
 	xmlns="http://www.w3.org/1999/xhtml" 
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
->
-<!--xmlns:sml="http://www.opengis.net/sensorML/1.0"-->
-	
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
   <ctl:suite name="sml:suite">
     <ctl:title>SensorML 1.0.1 Compliance Test Suite</ctl:title>
     <ctl:description>Verifies that an SensorML 1.0.1 implementation complies with the Sensor Model Language (SensorML) Implementation Specification.</ctl:description>
     <ctl:starting-test>sml:Main</ctl:starting-test>
   </ctl:suite>
+
   <ctl:test name="sml:Main">
     <ctl:assertion>The schema satisfies all applicable assertions.</ctl:assertion>
     <ctl:code>
@@ -39,7 +38,7 @@
                   Please provide a URL from which a SensorML document can 
                   be retrieved. Modify the URL template below to specify the 
                   location of an OGC SensorML 1.0.1 implementation to be tested.
-                  </p>
+            </p>
             <blockquote>
               <table border="1" padding="4" bgcolor="#99ccff">
                 <tr>
@@ -65,33 +64,32 @@
       </ctl:call-test>
     </ctl:code>
   </ctl:test>
-  <ctl:package>
-    <ctl:test name="sml:SchemaValidation">
-      <ctl:param name="serviceURL" />
-      <ctl:assertion>The provided SensorML complies with the SensorML 1.0.1 Implementation Specification.</ctl:assertion>
-      <ctl:code>
-        <ctl:message>Executing a request for getting the context of the provided SensorML from "<xsl:value-of select="$serviceURL" />"</ctl:message>
-        <xsl:variable name="response">
-          <ctl:request>
-            <ctl:url>
-              <xsl:value-of select="$serviceURL" />
-            </ctl:url>
-            <ctl:method>get</ctl:method>
-            <parsers:XMLValidatingParser>
-              <parsers:schemas>
-				<parsers:schema type="url">http://www.w3.org/2001/03/xml.xsd</parsers:schema>
-                <parsers:schema type="url">http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd</parsers:schema>
-              </parsers:schemas>
-            </parsers:XMLValidatingParser>
-          </ctl:request>
-        </xsl:variable>
-        <xsl:choose>
-          <xsl:when test="not($response/*)">
-            <ctl:message>FAILURE: Missing or invalid response entity.</ctl:message>
-            <ctl:fail />
-          </xsl:when>
-        </xsl:choose>
-      </ctl:code>
-    </ctl:test>
-  </ctl:package>
+
+  <ctl:test name="sml:SchemaValidation">
+    <ctl:param name="serviceURL" />
+    <ctl:assertion>The provided SensorML complies with the SensorML 1.0.1 Implementation Specification.</ctl:assertion>
+    <ctl:code>
+      <ctl:message>Executing a request for getting the context of the provided SensorML from "<xsl:value-of select="$serviceURL" />"</ctl:message>
+      <xsl:variable name="response">
+        <ctl:request>
+          <ctl:url>
+            <xsl:value-of select="$serviceURL" />
+          </ctl:url>
+          <ctl:method>get</ctl:method>
+          <parsers:XMLValidatingParser>
+            <parsers:schemas>
+              <parsers:schema type="url">http://www.w3.org/2001/03/xml.xsd</parsers:schema>
+              <parsers:schema type="url">http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd</parsers:schema>
+            </parsers:schemas>
+          </parsers:XMLValidatingParser>
+        </ctl:request>
+      </xsl:variable>
+      <xsl:choose>
+        <xsl:when test="not($response/*)">
+          <ctl:message>FAILURE: Missing or invalid response entity.</ctl:message>
+          <ctl:fail />
+        </xsl:when>
+      </xsl:choose>
+    </ctl:code>
+  </ctl:test>
 </ctl:package>
