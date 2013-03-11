@@ -15,6 +15,7 @@
       </suite>
       <revision>
         <name>r2</name>
+        <status>Beta</status>
         <sources>
           <source>sensorml/1.0.1/ctl</source>
         </sources>
