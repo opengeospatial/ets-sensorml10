@@ -31,10 +31,10 @@
       <ctl:message>Testing started at:  <xsl:value-of select="current-dateTime()" /></ctl:message>
       <ctl:message>**********************************************************************</ctl:message>
       <xsl:variable name="form-values">
-        <ctl:form height="600" width="800">
+        <ctl:form height="700" width="1024">
           <body>
             <h2>Compliance Test Suite for Sensor Model Language (SensorML) 1.0.1</h2>
-            <p>
+			<p>
                   Please provide a URL from which a SensorML document can 
                   be retrieved. Modify the URL template below to specify the 
                   location of an OGC SensorML 1.0.1 implementation to be tested.
@@ -46,11 +46,20 @@
                     <b>SensorML URL:</b>
                   </td>
                   <td align="center">
-                    <input name="service-url" size="128" type="text" value="http://hostname:port/path" />
+                    <input name="service-url" size="128" type="text" value="http://sensorweb.demo.52north.org/52n-sos-webapp-4.0.0-Beta1/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.example.org/sensors/101&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1" />
                   </td>
                 </tr>
               </table>
             </blockquote>
+			<p>Please select a response type from the url.</p>
+			<blockquote>
+				<table border="1" padding="4" bgcolor="#00ffff" align="center">
+					<tr>
+						<td><input type="radio" name="responseType" value="SensorML">SensorML Xml</input></td>
+						<td><input type="radio" name="responseType" value="DescribeSensorResponses" checked="true" >swes:DescribeSensorResponses XML</input></td>
+					</tr>				
+				</table>						
+			</blockquote>
             <input type="submit" value="Start" />
           </body>
         </ctl:form>
@@ -58,10 +67,20 @@
       <!-- Get user input:  Get the value of the SensorML URL that the user supplies -->
       <xsl:variable name="sml.get.url" select="$form-values/values/value[@key='service-url']" />
       <ctl:message>Executing tests on the SensorML implementation found at the following URL:  <xsl:value-of select="$sml.get.url" /></ctl:message>
+	  <xsl:variable name="responseType" select="$form-values/values/value[@key='responseType']"/>
+	  <ctl:message select="concat('responseType: ',$responseType)"/>
       <!--Call each test passing the SensorML URL as the parameter-->
-      <ctl:call-test name="sml:SchemaValidation">
-        <ctl:with-param name="serviceURL" select="$sml.get.url" />
-      </ctl:call-test>
+	  <xsl:if test="($responseType eq 'SensorML')">
+		<ctl:call-test name="sml:SchemaValidation">
+			<ctl:with-param name="serviceURL" select="$sml.get.url" />
+		</ctl:call-test>
+	  </xsl:if>
+	  <xsl:if test="($responseType eq 'DescribeSensorResponses')">
+		<ctl:call-test name="sml:SchemaValidationD">
+			<ctl:with-param name="serviceURL" select="$sml.get.url" />
+		</ctl:call-test>
+	  </xsl:if>
+	  
     </ctl:code>
   </ctl:test>
 
@@ -76,12 +95,40 @@
             <xsl:value-of select="$serviceURL" />
           </ctl:url>
           <ctl:method>get</ctl:method>
-          <parsers:XMLValidatingParser>
-            <parsers:schemas>
-              <parsers:schema type="url">http://www.w3.org/2001/03/xml.xsd</parsers:schema>
-              <parsers:schema type="url">http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd</parsers:schema>
-            </parsers:schemas>
-          </parsers:XMLValidatingParser>
+		  <parsers:XMLValidatingParser>
+			<parsers:schemas>
+				<parsers:schema type="resource">xsd\w3c\xml.xsd</parsers:schema>
+				<parsers:schema type="resource">xsd\ogc\sensorML\1.0.1/sensorML.xsd</parsers:schema>
+			</parsers:schemas>
+		  </parsers:XMLValidatingParser>
+        </ctl:request>
+      </xsl:variable>
+      <xsl:choose>
+        <xsl:when test="not($response/*)">
+          <ctl:message>FAILURE: Missing or invalid response entity.</ctl:message>
+          <ctl:fail />
+        </xsl:when>
+      </xsl:choose>
+    </ctl:code>
+  </ctl:test>
+  
+  <ctl:test name="sml:SchemaValidationD">
+    <ctl:param name="serviceURL" />
+    <ctl:assertion>The provided SensorML complies with the SensorML 1.0.1 Implementation Specification.</ctl:assertion>
+    <ctl:code>
+      <ctl:message>Executing a request for getting the context of the provided DescribeSensorResponses from "<xsl:value-of select="$serviceURL" />".</ctl:message>
+	  
+      <xsl:variable name="response">
+        <ctl:request>
+          <ctl:url>
+            <xsl:value-of select="$serviceURL" />
+          </ctl:url>
+          <ctl:method>get</ctl:method>
+		  <parsers:XMLValidatingParser>
+			 <parsers:schemas>
+				<parsers:schema type="resource">xsd/ogc/swes/2.0/swesDescribeSensor.xsd</parsers:schema>
+			 </parsers:schemas>
+		  </parsers:XMLValidatingParser>
         </ctl:request>
       </xsl:variable>
       <xsl:choose>
