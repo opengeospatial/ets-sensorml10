@@ -1,0 +1,21 @@
+<h3>Release Notes</h3>
+
+<h2>r3</h2>
+<li>Allow to test SensorML instances embedded in a swes:DescribeSensorResponse element</li>
+
+<h2>r2 </h2>
+<ul>
+   <li>Updated config file for TEAM-Engine v4</li>
+  <li>Removed nested package</li>
+</ul>
+
+<h2>r1</h2>
+<ul>
+   <li>Updated documentation</li>
+   <li>Simplified structure of the web folder</li>
+</ul>
+
+<h2r0</h2>
+<ul>
+   <li>First release - basic test against schema.</li>
+</ul>
