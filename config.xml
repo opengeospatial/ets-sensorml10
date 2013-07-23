@@ -14,12 +14,12 @@
         <description>Checks SensorML instances for conformance to OGC 07-000.</description>
       </suite>
       <revision>
-        <name>r3</name>
+        <name>r4</name>
         <status>Beta</status>
         <sources>
           <source>sensorml/1.0.1/ctl</source>
         </sources>
-		<resources>sensorml/2.0.0/resources</resources>
+        <resources>sensorml/1.0.1/resources</resources>
         <webdir>sensorml/1.0.1/web</webdir>
       </revision>
     </version>
