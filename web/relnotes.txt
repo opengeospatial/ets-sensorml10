@@ -1,11 +1,18 @@
 <h3>Release Notes</h3>
 
+<h2>r4 (2013-MM-DD)</h2>
+<ul>
+  <li>Fixed error in config.xml: incorrect resources path.</li>
+</ul>
+
 <h2>r3</h2>
-<li>Allow to test SensorML instances embedded in a swes:DescribeSensorResponse element</li>
+<ul>
+  <li>Allow to test SensorML instances embedded in a swes:DescribeSensorResponse element</li>
+</ul>
 
 <h2>r2 </h2>
 <ul>
-   <li>Updated config file for TEAM-Engine v4</li>
+  <li>Updated config file for TEAM-Engine v4</li>
   <li>Removed nested package</li>
 </ul>
 
