@@ -1,6 +1,6 @@
 <h3>Release Notes</h3>
 
-<h2>r4 (2013-MM-DD)</h2>
+<h2>r4 (2013-11-01)</h2>
 <ul>
   <li>Fixed error in config.xml: incorrect resources path.</li>
 </ul>
