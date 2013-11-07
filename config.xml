@@ -14,7 +14,7 @@
         <description>Checks SensorML instances for conformance to OGC 07-000.</description>
       </suite>
       <revision>
-        <name>r4</name>
+        <name>r5</name>
         <status>Beta</status>
         <sources>
           <source>sensorml/1.0.1/ctl</source>
