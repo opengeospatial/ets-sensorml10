@@ -1,4 +1,9 @@
 <h3>Release Notes</h3>
+<h2>r5 (2014-03-06)</h2>
+<ul>
+  <li>Depended on xlink schemas 1.1 (W3C XLink 1.1) . "http://schemas.opengis.net/xlink/1.0.0/xlinks.xsd" will be changed to "http://www.w3.org/1999/xlink.xsd" and
+		"xlink:simpleLink" will be changed to "xlink: simpleAttrs"</li>
+</ul>
 
 <h2>r4 (2013-11-01)</h2>
 <ul>
