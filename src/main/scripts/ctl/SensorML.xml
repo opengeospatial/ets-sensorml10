@@ -5,7 +5,7 @@
 	xmlns:ocp="http://www.occamlab.com/te/parsers" 
 	xmlns:tep="http://teamengine.sourceforge.net/parsers" 
 	xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
-	xmlns:swe="http://www.opengis.net/swe/1.0" 
+	xmlns:swe="http://www.opengis.net/swe/1.0.1" 
 	xmlns:xi="http://www.w3.org/2001/XInclude" 
 	xmlns:xlink="http://www.w3.org/1999/xlink" 
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
@@ -98,7 +98,7 @@
 		  <parsers:XMLValidatingParser>
 			<parsers:schemas>
 				<parsers:schema type="resource">xsd\w3c\xml.xsd</parsers:schema>
-				<parsers:schema type="resource">xsd\ogc\sensorML\1.0.1/sensorML.xsd</parsers:schema>
+				<parsers:schema type="resource">xsd\ogc\sensorML\1.0.1\sensorML.xsd</parsers:schema>
 			</parsers:schemas>
 		  </parsers:XMLValidatingParser>
         </ctl:request>
@@ -126,7 +126,7 @@
           <ctl:method>get</ctl:method>
 		  <parsers:XMLValidatingParser>
 			 <parsers:schemas>
-				<parsers:schema type="resource">xsd/ogc/swes/2.0/swesDescribeSensor.xsd</parsers:schema>
+				<parsers:schema type="resource">xsd\ogc\swes\2.0\swesDescribeSensor.xsd</parsers:schema>
 			 </parsers:schemas>
 		  </parsers:XMLValidatingParser>
         </ctl:request>
