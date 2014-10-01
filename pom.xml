@@ -5,8 +5,7 @@
   <artifactId>ets-sensorml10</artifactId>
   <groupId>org.opengis.cite</groupId>
   <version>1.0.1-r6</version>
-
-
+  
   <name>Conformance Test Suite - OGC Sensor Model Language</name>
   <description>
   Verifies conformance of implementations to OGC Sensor Model Language.
@@ -150,7 +149,7 @@
         <version>1.5</version>
         <configuration>
           <resourceBundles>
-            <resourceBundle>org.opengis.cite.teamengine:teamengine-resources:${teamengine.version}</resourceBundle>
+            <resourceBundle>org.opengis.cite.teamengine:teamengine-spi:${teamengine.version}</resourceBundle>
           </resourceBundles>
           <!-- attach resources to test build only -->
           <attachToMain>false</attachToMain>
@@ -197,7 +196,7 @@
       <url>http://myhome</url>
     </site>
   </distributionManagement>
-
+<!--
   <dependencies>
     <dependency>
       <groupId>org.opengis.cite.teamengine</groupId>
@@ -212,7 +211,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+-->
   <repositories>
     <repository>
       <!-- Allows public read-only access -->
