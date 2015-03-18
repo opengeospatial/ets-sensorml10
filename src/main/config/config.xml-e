@@ -20,7 +20,7 @@
           <source>sensorml/${spec-version}/ctl</source>
         </sources>
         <resources>sensorml/${spec-version}/resources</resources>
-        <webdir>sensorml/${spec-version}/site</webdir>
+        <webdir>sensorml/1.0.1/site</webdir>
       </revision>
     </version>
   </standard>

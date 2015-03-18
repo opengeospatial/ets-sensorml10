@@ -1,30 +1,18 @@
-# OGC Sensor Model Language Executable Test Suite
+# OGC Sensor Model Language 1.0.1 Executable Test Suite
 
 ## Overview
 
-This test suite is based on the following OGC specifications:
-
-- OGC XYZ Specification - 2.0.1 [OGC 0000](http://portal.opengeospatial.org/files/?artifact_id=00000) 
-- ...
+This test suite is based on the following OGC specification:
+  * _Sensor Model Language Documents_, version 1.0.1 [[OGC 07-000]](http://portal.opengeospatial.org/files/?artifact_id=21273)
 
 ## What is tested
 
-- GetCapabilitiesXYZ, GET method
-- ....
+The test performs a test against the SensorML schema. The SensorML can be a
+stand alone file or embedded inside a swes:DescribeSensorResponse element.
 
-## What is not tested
+## Release Notes
 
-- GetCapabilities with DFT
-
-
-##  Test data
-
-the....
-
-##  Contributors
-
-- Luis Bermudez
-- ...
+Release notes are available [here.](relnotes.html)
 
 ##  License
 
@@ -37,11 +25,4 @@ Issue tracker is available at [github](https://github.com/opengeospatial/ets-sen
 ## Mailing Lists
 
 The [cite-forum](http://cite.opengeospatial.org/forum) is where software developers discuss issues and solutions related to OGC tests. 
-
-
-##  Release Notes
-
-### r34 (2014-04-11)
-
-- CITE-901: amended describeRecord schemalocation check in Capabilities.sch
 
