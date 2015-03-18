@@ -1,6 +1,6 @@
 ## SensorML 1.0.1 Release notes
 
-# 1.7 (2015-03-xx)
+# 0.7 (2015-03-xx)
 
 - [#2](https://github.com/opengeospatial/ets-sensorml10/issues/2)Cleaned the structure of the test. The test scripts (ctl) have not changed. Starting this revision, the revision number will follow the conventions described in the [wiki](https://github.com/opengeospatial/cite/wiki/OGC-Compliance-Testing-Tools)
 - [#1](https://github.com/opengeospatial/ets-sensorml10/issues/1) Syntax errors in CTL 
