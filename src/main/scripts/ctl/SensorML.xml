@@ -60,7 +60,36 @@
 					</tr>				
 				</table>						
 			</blockquote>
-            <input type="submit" value="Start" />
+			<blockquote>
+				<table border="1" padding="4" bgcolor="#00ffff" align="center">
+					<tr>
+						<td>
+							<input type="submit" value="Start" />
+						</td>
+					</tr>				
+				</table>						
+			</blockquote>
+			<blockquote>
+			<p>
+				<h3>SensorML URL Example:</h3>
+				An SOS 2.0 DescribeSensor request (The root element is "swes:DescribeSensorResponse").  <br />
+				For example:<br />
+				<a target="_blank" href="http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=2.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/9&amp;amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1">
+				http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/9&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1</a>
+				<br />
+				<br />
+				an SOS 1.0 DescribeSensor request (The root element is "sml:SensorML") , <br />
+				For example:<br />
+				<a target="_blank" href='http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=1.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/9&amp;amp;outputFormat=text/xml;subtype="sensorML/1.0.1"'>
+				http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=1.0.0&amp;procedure=http://www.52north.org/test/procedure/9&amp;outputFormat=text/xml;subtype=%22sensorML/1.0.1%22</a>
+				<br />
+				<br />
+				a SensorML with a public URL ( The root element is "sml:SensorML"). <br />
+				For example:<br />
+				<a target="_blank" href="https://raw.githubusercontent.com/opengeospatial/ets-sensorml10/master/src/main/example/SensorML1.0.1.xml">
+				https://github.com/opengeospatial/ets-sensorml10/blob/master/src/main/example/SensorML1.0.1.xml</a>
+			</p>
+			</blockquote>
           </body>
         </ctl:form>
       </xsl:variable>
