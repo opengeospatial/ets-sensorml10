@@ -3,8 +3,9 @@
 ## Overview
 
 This test suite is based on the following OGC specification:
-  * OpenGIS Sensor Model Language (SensorML), version 1.0.1 [[OGC 07-000]](http://portal.opengeospatial.org/files/?artifact_id=21273)
-  * OpenGIS SensorML Encoding Standard v 1.0 Schema Corregendum 1 (1.01) [[ 07-122r2 ]](http://portal.opengeospatial.org/files/?artifact_id=24757)
+
+- OpenGIS Sensor Model Language (SensorML), version 1.0.1 [OGC 07-000](http://portal.opengeospatial.org/files/?artifact_id=21273)
+- OpenGIS SensorML Encoding Standard v 1.0 Schema Corregendum 1 (1.01) [07-122r2](http://portal.opengeospatial.org/files/?artifact_id=24757)
 
 ## What is tested
 
