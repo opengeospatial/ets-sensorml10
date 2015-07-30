@@ -1,10 +1,8 @@
 # OGC Sensor Model Language 1.0.1 Test-Suite
 
-The OGC Sensor Model Language 1.0.1 Test-Suite provides the Executable Test Script (ETS) to test implementations against the following specification(s):
+The OGC Sensor Model Language 1.0.1 Test-Suite provides the Executable Test Script (ETS) to test implementations against the following specification(s): Sensor Model Language version 1.0.1 [OGC 07-000](http://portal.opengeospatial.org/files/?artifact_id=21273)
 
-Sensor Model Language version 1.0.1 [OGC 07-000](http://portal.opengeospatial.org/files/?artifact_id=21273)
-
-Detailed information about this test suite is available [here]( http://htmlpreview.github.com/?https://github.com/opengeospatial/ets-sensorml10/blob/master/src/main/web/index.html).
+Detailed information about this test suite is available [here](http://opengeospatial.github.io/ets-sensorml10).
 
 ## License
 
