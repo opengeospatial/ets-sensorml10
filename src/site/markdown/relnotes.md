@@ -1,4 +1,6 @@
 ## SensorML 1.0.1 Release notes
+# 0.9
+- [#5](https://github.com/opengeospatial/ets-sensorml10/issues/5) Update CTL with better information about conformance classes
 
 # 0.8 (2015-07-30)
 - Update pom.xml to build with Maven 2
