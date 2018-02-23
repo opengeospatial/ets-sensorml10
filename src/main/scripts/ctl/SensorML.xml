@@ -19,7 +19,7 @@
     <ctl:starting-test>sml:Main</ctl:starting-test>
   </ctl:suite>
 
-  <ctl:test name="sml:Main">
+  <ctl:test name="sml:Main" isConformanceClass="true" isBasic="true">
     <ctl:assertion>The schema satisfies all applicable assertions.</ctl:assertion>
     <ctl:code>
       <!--
@@ -113,7 +113,7 @@
     </ctl:code>
   </ctl:test>
 
-  <ctl:test name="sml:SchemaValidation">
+  <ctl:test name="sml:SchemaValidation" >
     <ctl:param name="serviceURL" />
     <ctl:assertion>The provided SensorML complies with the SensorML 1.0.1 Implementation Specification.</ctl:assertion>
     <ctl:code>
@@ -141,7 +141,7 @@
     </ctl:code>
   </ctl:test>
   
-  <ctl:test name="sml:SchemaValidationD">
+  <ctl:test name="sml:SchemaValidationD" >
     <ctl:param name="serviceURL" />
     <ctl:assertion>The provided SensorML complies with the SensorML 1.0.1 Implementation Specification.</ctl:assertion>
     <ctl:code>
