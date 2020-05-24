@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ctl:package 
-	xmlns:ctl="http://www.occamlab.com/ctl" 
-	xmlns:parsers="http://www.occamlab.com/te/parsers" 
-	xmlns:ocp="http://www.occamlab.com/te/parsers" 
-	xmlns:tep="http://teamengine.sourceforge.net/parsers" 
+<ctl:package
+	xmlns:ctl="http://www.occamlab.com/ctl"
+	xmlns:parsers="http://www.occamlab.com/te/parsers"
+	xmlns:ocp="http://www.occamlab.com/te/parsers"
+	xmlns:tep="http://teamengine.sourceforge.net/parsers"
 	xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
-	xmlns:swe="http://www.opengis.net/swe/1.0.1" 
-	xmlns:xi="http://www.w3.org/2001/XInclude" 
-	xmlns:xlink="http://www.w3.org/1999/xlink" 
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-	xmlns:gml="http://www.opengis.net/gml" 
-	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:swe="http://www.opengis.net/swe/1.0.1"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:gml="http://www.opengis.net/gml"
+	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <ctl:suite name="sml:suite">
@@ -35,8 +35,8 @@
           <body>
             <h2>Compliance Test Suite for Sensor Model Language (SensorML) 1.0.1</h2>
 			<p>
-                  Please provide a URL from which a SensorML document can 
-                  be retrieved. Modify the URL template below to specify the 
+                  Please provide a URL from which a SensorML document can
+                  be retrieved. Modify the URL template below to specify the
                   location of an OGC SensorML 1.0.1 implementation to be tested.
             </p>
             <blockquote>
@@ -46,7 +46,7 @@
                     <b>SensorML URL:</b>
                   </td>
                   <td align="center">
-                    <input name="service-url" size="128" type="text" value="http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/9&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1" />
+                    <input name="service-url" size="128" type="text" value="http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1" />
                   </td>
                 </tr>
               </table>
@@ -57,8 +57,8 @@
 					<tr>
 						<td><input type="radio" name="responseType" value="SensorML">SensorML Xml</input></td>
 						<td><input type="radio" name="responseType" value="DescribeSensorResponses" checked="true" >swes:DescribeSensorResponses XML</input></td>
-					</tr>				
-				</table>						
+					</tr>
+				</table>
 			</blockquote>
 			<blockquote>
 				<table border="1" padding="4" bgcolor="#00ffff" align="center">
@@ -66,22 +66,22 @@
 						<td>
 							<input type="submit" value="Start" />
 						</td>
-					</tr>				
-				</table>						
+					</tr>
+				</table>
 			</blockquote>
 			<blockquote>
 			<p>
 				<h3>SensorML URL Example:</h3>
 				An SOS 2.0 DescribeSensor request (The root element is "swes:DescribeSensorResponse").  <br />
 				For example:<br />
-				<a target="_blank" href="http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=2.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/9&amp;amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1">
-				http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/9&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1</a>
+				<a target="_blank" href="http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=2.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/1&amp;amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1">
+				http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1</a>
 				<br />
 				<br />
 				an SOS 1.0 DescribeSensor request (The root element is "sml:SensorML") , <br />
 				For example:<br />
-				<a target="_blank" href='http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=1.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/9&amp;amp;outputFormat=text/xml;subtype="sensorML/1.0.1"'>
-				http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=1.0.0&amp;procedure=http://www.52north.org/test/procedure/9&amp;outputFormat=text/xml;subtype=%22sensorML/1.0.1%22</a>
+				<a target="_blank" href='http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=1.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/1&amp;amp;outputFormat=text/xml;subtype="sensorML/1.0.1"'>
+				http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=1.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;outputFormat=text/xml;subtype=%22sensorML/1.0.1%22</a>
 				<br />
 				<br />
 				a SensorML with a public URL ( The root element is "sml:SensorML"). <br />
@@ -109,7 +109,7 @@
 			<ctl:with-param name="serviceURL" select="$sml.get.url" />
 		</ctl:call-test>
 	  </xsl:if>
-	  
+
     </ctl:code>
   </ctl:test>
 
@@ -140,13 +140,13 @@
       </xsl:choose>
     </ctl:code>
   </ctl:test>
-  
+
   <ctl:test name="sml:SchemaValidationD" >
     <ctl:param name="serviceURL" />
     <ctl:assertion>The provided SensorML complies with the SensorML 1.0.1 Implementation Specification.</ctl:assertion>
     <ctl:code>
       <ctl:message>Executing a request for getting the context of the provided DescribeSensorResponses from "<xsl:value-of select="$serviceURL" />".</ctl:message>
-	  
+
       <xsl:variable name="response">
         <ctl:request>
           <ctl:url>
