@@ -1,4 +1,10 @@
 ## SensorML 1.0.1 Release notes
+
+# 1.0
+- [#10](https://github.com/opengeospatial/ets-sensorml10/pull/10) Set status to final
+- [#8](https://github.com/opengeospatial/ets-sensorml10/issues/8) Introduce Dockerfile and Maven Docker plugin
+- [#7](https://github.com/opengeospatial/ets-sensorml10/pull/7) Updated procedure identifier in examples
+
 # 0.9
 - [#5](https://github.com/opengeospatial/ets-sensorml10/issues/5) Update CTL with better information about conformance classes
 
