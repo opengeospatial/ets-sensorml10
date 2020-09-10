@@ -19,7 +19,7 @@
     <ctl:starting-test>sml:Main</ctl:starting-test>
   </ctl:suite>
 
-  <ctl:test name="sml:Main" isConformanceClass="true" isBasic="true">
+  <ctl:test name="sml:Main">
     <ctl:assertion>The schema satisfies all applicable assertions.</ctl:assertion>
     <ctl:code>
       <!--
@@ -100,16 +100,36 @@
 	  <ctl:message select="concat('responseType: ',$responseType)"/>
       <!--Call each test passing the SensorML URL as the parameter-->
 	  <xsl:if test="($responseType eq 'SensorML')">
-		<ctl:call-test name="sml:SchemaValidation">
+		<ctl:call-test name="sml:SensorML">
 			<ctl:with-param name="serviceURL" select="$sml.get.url" />
 		</ctl:call-test>
 	  </xsl:if>
 	  <xsl:if test="($responseType eq 'DescribeSensorResponses')">
-		<ctl:call-test name="sml:SchemaValidationD">
+		<ctl:call-test name="sml:DescribeSensorResponses">
 			<ctl:with-param name="serviceURL" select="$sml.get.url" />
 		</ctl:call-test>
 	  </xsl:if>
 
+    </ctl:code>
+  </ctl:test>
+
+  <ctl:test name="sml:SensorML" isConformanceClass="true" isBasic="true">
+    <ctl:param name="serviceURL" />
+    <ctl:assertion>Validate SensorML 1.0.1 Implementation Specification.</ctl:assertion>
+    <ctl:code>
+      <ctl:call-test name="sml:SchemaValidation">
+        <ctl:with-param name="serviceURL" select="$serviceURL" />
+      </ctl:call-test>
+    </ctl:code>
+  </ctl:test>
+
+  <ctl:test name="sml:DescribeSensorResponses" isConformanceClass="true" isBasic="true">
+    <ctl:param name="serviceURL" />
+    <ctl:assertion>Validate SensorML 1.0.1 Implementation Specification.</ctl:assertion>
+    <ctl:code>
+      <ctl:call-test name="sml:SchemaValidationD">
+        <ctl:with-param name="serviceURL" select="$serviceURL" />
+      </ctl:call-test>
     </ctl:code>
   </ctl:test>
 
