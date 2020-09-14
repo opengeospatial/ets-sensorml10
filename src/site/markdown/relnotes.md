@@ -1,5 +1,8 @@
 ## SensorML 1.0.1 Release notes
 
+# 1.0.1 (2020-09-14)
+- [#11](https://github.com/opengeospatial/ets-sensorml10/issues/11) HTML report is not filled correctly
+
 # 1.0
 - [#10](https://github.com/opengeospatial/ets-sensorml10/pull/10) Set status to final
 - [#8](https://github.com/opengeospatial/ets-sensorml10/issues/8) Introduce Dockerfile and Maven Docker plugin
