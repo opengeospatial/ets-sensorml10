@@ -46,7 +46,7 @@
                     <b>SensorML URL:</b>
                   </td>
                   <td align="center">
-                    <input name="service-url" size="128" type="text" value="http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1" />
+                    <input name="service-url" size="128" type="text" value="https://sensorweb.demo.52north.org/sos/service?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1" />
                   </td>
                 </tr>
               </table>
@@ -74,14 +74,14 @@
 				<h3>SensorML URL Example:</h3>
 				An SOS 2.0 DescribeSensor request (The root element is "swes:DescribeSensorResponse").  <br />
 				For example:<br />
-				<a target="_blank" href="http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=2.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/1&amp;amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1">
-				http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1</a>
+				<a target="_blank" href="https://sensorweb.demo.52north.org/sos/service?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=2.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/1&amp;amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1">
+				https://sensorweb.demo.52north.org/sos/service?request=DescribeSensor&amp;service=SOS&amp;version=2.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1</a>
 				<br />
 				<br />
 				an SOS 1.0 DescribeSensor request (The root element is "sml:SensorML") , <br />
 				For example:<br />
-				<a target="_blank" href='http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=1.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/1&amp;amp;outputFormat=text/xml;subtype="sensorML/1.0.1"'>
-				http://sensorweb.demo.52north.org/52n-sos-webapp/sos/kvp?request=DescribeSensor&amp;service=SOS&amp;version=1.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;outputFormat=text/xml;subtype=%22sensorML/1.0.1%22</a>
+				<a target="_blank" href='https://sensorweb.demo.52north.org/sos/service?request=DescribeSensor&amp;amp;service=SOS&amp;amp;version=1.0.0&amp;amp;procedure=http://www.52north.org/test/procedure/1&amp;amp;outputFormat=text/xml;subtype="sensorML/1.0.1"'>
+				https://sensorweb.demo.52north.org/sos/service?request=DescribeSensor&amp;service=SOS&amp;version=1.0.0&amp;procedure=http://www.52north.org/test/procedure/1&amp;outputFormat=text/xml;subtype=%22sensorML/1.0.1%22</a>
 				<br />
 				<br />
 				a SensorML with a public URL ( The root element is "sml:SensorML"). <br />
